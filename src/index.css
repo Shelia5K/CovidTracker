@@ -1,0 +1,198 @@
+body {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+
+
+.app_header{
+
+  position: absolute;
+  width: 352px;
+  height: 84px;
+  left: 260px;
+  top: 98px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 84px;
+
+  color: #000000;
+}
+
+.app_logo{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 60px;
+  top: 40px;
+  background: url(/src/images/covid.jpg);
+}
+
+.app_search {
+
+  position: absolute;
+  width: 600px;
+  height: 80px;
+  left: 1260px;
+  top: 100px;
+  font-size: 48px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border-style: hidden;
+}
+
+input::placeholder {
+
+  position: absolute;
+  width: 186px;
+  height: 56px;
+  top: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 56px;
+  
+  color: #B2B2B2;
+}
+
+table {
+  position: absolute;
+  height: 80px;
+  left: 60px;
+  right: 60px;
+  top: 240px;
+  width: 1800px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  color: black;
+  border-collapse: collapse;
+
+}
+
+tr {
+  font-size: 24px;
+  line-height: 28px;
+  color:black; 
+}
+
+td {
+  text-align: left;
+  background: gray; 
+  /* */
+  border-radius: 20px;
+}
+
+th, td {
+  padding: 20px;
+  border-left: 1px solid white;
+  border-bottom: 20px;
+}
+
+button {
+  background-color: #2196F3;
+  border:none;
+  font-size: 24px;
+  font-family: Roboto;
+  font-weight: bold;
+}
+
+thead {
+  background: #2196F3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #FFFFFF;
+}
+
+thead button.ascending::after {
+  content: '👇';
+  display: inline-block;
+  margin-left: 1em;
+}
+
+thead button.descending::after {
+  content: '☝️';
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.btn_Country {
+  background-color: gray;
+}
+
+tbody td:nth-child(1) {
+  text-align: center;
+}
+
+thead th:nth-child(1) {
+  width: 3%;
+  text-align: center;
+}
+
+thead th:nth-child(2) {
+  width: 50%;
+  text-align: left;
+}
+
+thead th:nth-child(3) {
+  width: 20%;
+  text-align: left;
+}
+
+.CountryInfo {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .2);
+  backdrop-filter: blur(10px);
+}
+
+.CountryInfo_info {
+  font-family: Roboto;
+}
+
+.CountryInfo.open {
+  height: 100%;
+  display: block;
+}
+
+.CountryInfo.close {
+  height: 0;
+  display: none;
+}
+
+.CountryInfo_body {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  margin-top: 5%;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 500px;
+}
+
+.CountryInfo_close {
+  font-size: 20px;
+  color: white;
+  border-radius: 20px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 171px;
+  height: 49px;
+}
