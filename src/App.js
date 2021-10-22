@@ -35,7 +35,7 @@ function App() {
       return country.Country.toLowerCase().includes(value)
     })
     setCountries(searchCountries) // меняем состояние главного массива countries на страны, которые нашли
-  } 
+  }
 
   useEffect(() => { // useEffect даёт вам возможность выполнять загрузку данных в функциональном компоненте
     req()
@@ -68,35 +68,34 @@ function App() {
         <thead>
           <tr>
 
-            <th>№</th>
+            <th className="th_number">&#x2116;</th>
 
             <th><button 
               type="button"
               onClick={() => requestSort('Country')}
-              className={getClassNamesFor('Country')}
+              className={getClassNamesFor('Country'), "th_btn"}
               >Country
               </button>
             </th>
             
-            <th>
+            <th className="th_totalConfirmed">
               <button 
               type="button"
               onClick={() => requestSort('TotalConfirmed')}
-              className={getClassNamesFor('TotalConfirmed')}
+              className={getClassNamesFor('TotalConfirmed'), "th_btn"}
               >Total Confirmed
               </button>
             </th>
 
           </tr>
         </thead>
-
         <tbody>
           { items.map((c, index) => {
             return (
               <tr key = {c.ID}>
-                <td>{index + 1}</td>
+                <td className="td_number">{index + 1}</td>
                 <td><button 
-                className="btn_Country" 
+                className="td_Country" 
                 type="button" 
                 onClick={() => setModalWindow(
                   {...modalWindow,
@@ -108,7 +107,7 @@ function App() {
                   })}
                 >{c.Country}
                 </button></td>
-                <td>{c.TotalConfirmed}</td>
+                <td className="td_totalConfirmed">{c.TotalConfirmed}</td>
               </tr>
             )
           })}

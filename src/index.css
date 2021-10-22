@@ -1,3 +1,4 @@
+
 body {
   position: absolute;
   width: 1920px;
@@ -9,14 +10,15 @@ body {
   padding: 0;
 }
 
+/* "STATISTIC" */
 
 .app_header{
 
   position: absolute;
   width: 352px;
   height: 84px;
-  left: 260px;
-  top: 98px;
+  left: 270px;
+  top: 108px;
 
   font-family: Roboto;
   font-style: normal;
@@ -27,6 +29,8 @@ body {
   color: #000000;
 }
 
+/* Picture of covid */
+
 .app_logo{
   position: absolute;
   width: 200px;
@@ -36,13 +40,15 @@ body {
   background: url(/src/images/covid.jpg);
 }
 
+/* Search input */
+
 .app_search {
 
   position: absolute;
   width: 600px;
   height: 80px;
   left: 1260px;
-  top: 100px;
+  top: 110px;
   font-size: 48px;
   background: #FFFFFF;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -61,97 +67,77 @@ input::placeholder {
   font-weight: normal;
   font-size: 48px;
   line-height: 56px;
-  
   color: #B2B2B2;
 }
 
-table {
+/* Table */
+
+ table {
   position: absolute;
-  height: 80px;
   left: 60px;
   right: 60px;
   top: 240px;
   width: 1800px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   color: black;
-  border-collapse: collapse;
-
+  border-collapse: separate;
+  border-spacing: 0 20px;
 }
 
-tr {
-  font-size: 24px;
-  line-height: 28px;
-  color:black; 
-}
-
-td {
-  text-align: left;
-  background: gray; 
-  /* */
-  border-radius: 20px;
-}
-
-th, td {
-  padding: 20px;
-  border-left: 1px solid white;
-  border-bottom: 20px;
-}
-
-button {
-  background-color: #2196F3;
-  border:none;
-  font-size: 24px;
-  font-family: Roboto;
-  font-weight: bold;
-}
-
-thead {
-  background: #2196F3;
+th, td, .th_btn, .td_Country {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
-
-  color: #FFFFFF;
 }
 
-thead button.ascending::after {
-  content: '👇';
-  display: inline-block;
-  margin-left: 1em;
+.th_number, .td_number {
+  border-radius: 20px 0 0 20px;
 }
 
-thead button.descending::after {
-  content: '☝️';
-  display: inline-block;
-  margin-left: 1em;
-}
+.th_totalConfirmed, .td_totalConfirmed {
+  border-radius: 0 20px 20px 0;
+} 
 
-.btn_Country {
-  background-color: gray;
-}
-
-tbody td:nth-child(1) {
-  text-align: center;
-}
-
-thead th:nth-child(1) {
-  width: 3%;
-  text-align: center;
-}
-
-thead th:nth-child(2) {
-  width: 50%;
+th {
+  border-right: 1px solid #FFFFFF;
+  background-color: #2196F3;
+  color: white;
+  height: 80px;
   text-align: left;
 }
 
-thead th:nth-child(3) {
-  width: 20%;
-  text-align: left;
+.th_number, .td_number {
+  text-align: center;
+  width: 78px;
 }
+
+.th_btn {
+  color: white;
+  background-color: #2196F3;
+  border:none;
+  box-shadow: none;
+}
+
+.td_Country {
+  color: #000000;
+  background-color: white;
+  border:none;
+  box-shadow: none;
+}
+
+td {
+  border-right: 1px solid  #B2B2B2;
+  background-color: white;
+  height: 80px;
+}
+
+.td_Country, .td_totalConfirmed, .th_btn {
+  padding-left: 23px;
+}
+
+/* Modal Window */
 
 .CountryInfo {
   position: fixed;
@@ -161,8 +147,13 @@ thead th:nth-child(3) {
   backdrop-filter: blur(10px);
 }
 
-.CountryInfo_info {
-  font-family: Roboto;
+.leftstr, .rightstr {
+  float: left;
+  width: 50%;
+}
+
+ .rightstr {
+  text-align: right; 
 }
 
 .CountryInfo.open {
@@ -182,14 +173,15 @@ thead th:nth-child(3) {
   margin-top: 5%;
   padding: 20px;
   border-radius: 10px;
-  max-height: 500px;
+  height: 330px;
 }
 
 .CountryInfo_close {
-  font-size: 20px;
+  margin-left: 33%;
+  font-size: 24px;
   color: white;
   border-radius: 20px;
-  background-color: blue;
+  background-color: #2196F3;
   display: flex;
   align-items: center;
   justify-content: center;
